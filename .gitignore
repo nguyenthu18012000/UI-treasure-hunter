@@ -1,0 +1,72 @@
+﻿# Thư mục hệ thống
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# Visual Studio / Rider / VS Code
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+# Thư mục cache và metadata
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# Crash và các file tạm thời khác
+sysinfo.txt
+*.apk
+*.aab
+
+# Các file liên quan đến ánh xạ meta không cần thiết
+*.db
+*.opendb
+
+# Unity Cloud Build
+/[Uu]ser[Ss]ettings/
+
+# Thư mục git-lfs nếu dùng
+*.lfsconfig
+
+# Đầu ra của builds
+*.exe
+*.dll
+*.app
+*.so
+*.dylib
+
+# Đầu ra khác
+*.zip
+*.tar.gz
+*.rar
+
+# File macOS
+.DS_Store
+
+# Thư mục Android/Gradle
+.gradle/
+*.gradle
+*.iml
+build/
+
+# Thư mục Xcode
+*.xcodeproj
+*.xcworkspace
+*.xcuserdata
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+.vs/
