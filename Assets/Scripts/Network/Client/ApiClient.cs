@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -10,6 +10,22 @@ namespace TreasureHunter.Network
     public class ApiClient : MonoBehaviour
     {
         [SerializeField] private string baseUrl = "http://localhost:8080";
+
+         // tạo biến singleton để các chỗ khác gọi được: ApiClient.Instance
+        public static ApiClient Instance { get; private set; }
+
+        private void Awake()
+        {
+            // Đảm bảo chỉ có một Instance duy nhất
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // giữ ApiClient sống xuyên suốt game
+        }
 
         public IEnumerator Get<T>(string endpoint, System.Action<ApiResponse<BaseResponse<T>>> callback)
         {

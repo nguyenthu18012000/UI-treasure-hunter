@@ -15,7 +15,7 @@ public class Login : MonoBehaviour
     void Start()
     {
         loginButton.onClick.AddListener(OnLoginClick);
-        apiClient = FindObjectOfType<ApiClient>();
+        apiClient = ApiClient.Instance;
     }
 
     void OnLoginClick()
@@ -43,7 +43,7 @@ public class Login : MonoBehaviour
                     PlayerPrefs.Save();
                     string token = PlayerPrefs.GetString("access_token", "");
                     Debug.Log("AccessToken: " + token);
-                    SceneManager.LoadScene("SampleScene");
+                    SceneManager.LoadScene("MainScene");
                 }
                 else
                 {
